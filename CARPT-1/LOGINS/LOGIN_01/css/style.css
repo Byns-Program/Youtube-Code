@@ -1,0 +1,153 @@
+body {
+    background-color: #f8f9fa;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.form-container {
+    max-width: 850px;
+    margin: 50px auto;
+    /* padding: 20px; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .form-container {
+    background-color: #1e1e1e;
+}
+
+.toggle-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.toggle-switch .slider {
+    width: 50px;
+    height: 24px;
+    background-color: #e0e0e0;
+    border-radius: 24px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-switch .slider:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s;
+}
+
+.toggle-switch .slider .icon {
+    position: absolute;
+    width: 16px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    transition: color 0.3s;
+}
+
+.toggle-switch input:checked + .slider {
+    background-color: #242424;
+}
+
+.toggle-switch input:checked + .slider:before {
+    transform: translateX(26px);
+    background-color: #fff;
+}
+
+.toggle-switch input:not(:checked) + .slider .icon i {
+    color: #000; /* Sol en modo claro */
+}
+
+.toggle-switch input:checked + .slider .icon i {
+    color: #000; /* Luna en modo oscuro */
+}
+
+.toggle-switch input:not(:checked) + .slider .icon {
+    left: 4px; /* Posición del sol en modo claro */
+}
+
+.toggle-switch input:checked + .slider .icon {
+    right: 4px; /* Posición de la luna en modo oscuro */
+}
+
+.input-group-text {
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+}
+
+.input-group-text i {
+    color: #6c757d;
+}
+
+.form-control {
+    border-radius: 0.375rem;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004080;
+}
+
+.pl-0{
+    padding-left: 0 !important;
+}
+
+@media (min-width: 576px) {
+    #img-login{
+        display: none;
+    }
+    .form-container {
+        margin: 50px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    #img-login{
+        display: none;
+    }
+    .form-container {
+        margin: 50px 15px;
+    }
+}
+@media (min-width: 768px) {
+    #img-login{
+        display: block;
+    }
+    .form-container {
+        margin: 50px auto;
+    }
+
+}
+
